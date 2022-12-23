@@ -19,8 +19,10 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    outputs:
+      output1: ${{ steps.step4.outputs.test }}
     env:
-      IP: hello_world 
+      greeting: hello_world 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -36,7 +38,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       - name: Playing with variables
-        run: echo "Test"
+        run: echo "Test" >> $GITHUB_OUTPUT
         env:
           IP: 192.168.22.1
       - name: Printing IP
