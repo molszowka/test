@@ -36,6 +36,10 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       - name: Playing with variables
-        run: echo "$var1"
+        run: echo "Test"
         env:
-          var1: IP
+          IP: 192.168.22.1
+      - name: Printing IP
+        run: echo "IP"
+        env:
+          var2: 192.168.22.10
