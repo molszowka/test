@@ -34,7 +34,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       - id: step3
-        run: echo "test=hello" >> $GITHUB_OUTPUT
+        run: echo "test=hellomoto" >> $GITHUB_OUTPUT
         env:
           IP: 192.168.22.1
       - name: Printing IP
