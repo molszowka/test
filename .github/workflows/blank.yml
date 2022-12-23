@@ -45,5 +45,5 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Prinitng output from previous job
+      - name: Printing output from previous job
         run: echo ${{needs.build.outputs.output1}}
