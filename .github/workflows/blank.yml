@@ -36,6 +36,6 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       - name: Playing with variables
-        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
+        run: echo "$var1"
         env:
-          First_Name: Mona
+          var1: IP
