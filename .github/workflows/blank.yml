@@ -28,15 +28,13 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
-        env:
-        
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-      - name: Playinh with variables
+      - name: Playing with variables
         run: echo $var1 
         env:
           var1: hello_world
