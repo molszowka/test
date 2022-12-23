@@ -38,6 +38,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       - name: Playing with variables
+        id: step4
         run: echo "test=hello" >> $GITHUB_OUTPUT
         env:
           IP: 192.168.22.1
