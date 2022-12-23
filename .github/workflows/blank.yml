@@ -40,6 +40,6 @@ jobs:
         env:
           IP: 192.168.22.1
       - name: Printing IP
-        run: echo "IP"
+        run: echo "$IP"
         env:
           var2: 192.168.22.10
