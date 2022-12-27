@@ -45,7 +45,7 @@ jobs:
         with:
           envFilePath: ./.github/variables/myvars.env
       - name: Printing env
-        run: echo "myvar"
+        run: echo "$myvar"
         env:
           var2: 192.168.22.10
   job2:
