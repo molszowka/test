@@ -40,19 +40,16 @@ jobs:
         run: echo "$IP"
         env:
           var2: 192.168.22.10
-      - name: 'Set environmental variables'
-
-          
-#   job2:
-#     runs-on: ubuntu-latest
-#     needs: build
-#     steps:
-#       - name: Printing output from previous job
-#         run: echo ${{needs.build.outputs.output1}}
-#   job3:
-#     needs: job2
-#     uses: ./.github/workflows/variables.yml
-#     run: echo "test"
-#     with:
-#       var3: 192.168.22.10
+  job2:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Printing output from previous job
+        run: echo ${{needs.build.outputs.output1}}
+  job3:
+    needs: job2
+    uses: ./.github/workflows/variables.yml
+    run: echo "test"
+    with:
+      var3: 192.168.22.10
 
