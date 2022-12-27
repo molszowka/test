@@ -47,3 +47,9 @@ jobs:
     steps:
       - name: Printing output from previous job
         run: echo ${{needs.build.outputs.output1}}
+  job3:
+    needs: job2
+    uses: ./.github/workflows/test.yml
+    with:
+      var3: 192.168.22.10
+
