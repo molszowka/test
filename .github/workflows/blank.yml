@@ -12,7 +12,10 @@ on:
     
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
+    inputs:
+      varFilePath:
+        required: false
+        default: ./.github/variables/*
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -47,10 +50,6 @@ jobs:
       - name: Printing output from previous job
         run: echo ${{needs.build.outputs.output1}}
   job3:
-    inputs:
-      varFilePath:
-        required: false
-        default: ./.github/variables/*
     needs: job2
     uses: ./.github/workflows/variables.yml
     with:
