@@ -50,7 +50,6 @@ jobs:
       - name: Printing output from previous job
         run: echo ${{needs.build.outputs.output1}}
   job3:
-  - name: Run other workflow
     needs: job2
     uses: ./.github/workflows/variables.yml
     run: echo "test"
