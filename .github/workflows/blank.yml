@@ -16,10 +16,6 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  inputs:
-    varFilePath:
-      required: false
-      default: ./.github/variables/*
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest      
@@ -51,6 +47,10 @@ jobs:
       - name: Printing output from previous job
         run: echo ${{needs.build.outputs.output1}}
   job3:
+    inputs:
+      varFilePath:
+        required: false
+        default: ./.github/variables/*
     needs: job2
     uses: ./.github/workflows/variables.yml
     with:
