@@ -15,7 +15,7 @@ jobs:
     env:
       Greeting: Hello
     steps:
-      - name: "Say Hello Mona it's Monday"
+      - name: "Printing from var file"
         run: echo "$var3"
         env:
           First_Name: Mona
