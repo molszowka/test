@@ -49,7 +49,6 @@ jobs:
   job3:
     needs: job2
     uses: ./.github/workflows/variables.yml
-    run: echo "test"
     with:
       var3: 192.168.22.10
 
