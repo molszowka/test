@@ -54,7 +54,7 @@ jobs:
           path: ./.github/variables/myvars.env
           contents: |
             Hello World!
-          write-mode: append
+          write-mode: overwrite
   job2:
     runs-on: ubuntu-latest
     needs: build
