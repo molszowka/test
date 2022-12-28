@@ -51,10 +51,10 @@ jobs:
       - name: Writing to env file
         uses: DamianReeves/write-file-action@master
         with:
-          path: ./.github/variables/myvars.env
+          path: ./.github/variables/automatic.env
           contents: |
             Hello World!
-          write-mode: overwrite
+          write-mode: append
   job2:
     runs-on: ubuntu-latest
     needs: build
