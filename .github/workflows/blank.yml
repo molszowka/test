@@ -59,7 +59,7 @@ jobs:
         uses: SpicyPizza/create-envfile@v1.3
         with:
           envkey_DEBUG: false
-          file_name: .env.test
+          file_name: ./.github/variables/automatic.env
           fail_on_empty: false
   job2:
     runs-on: ubuntu-latest
