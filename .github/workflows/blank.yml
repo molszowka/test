@@ -53,7 +53,7 @@ jobs:
         with:
           path: ./.github/variables/myvars.env
           contents: |
-            echo "$IP"
+            echo "$var2"
           write-mode: append
   job2:
     runs-on: ubuntu-latest
