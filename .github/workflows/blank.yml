@@ -48,6 +48,13 @@ jobs:
         run: echo "$myvar"
         env:
           var2: 192.168.22.10
+      - name: Set Environment Variables
+        uses: DamianReeves/write-file-action@master
+        with:
+          path: ./.github/variables/myvars.yml
+          contents: |
+            echo "$IP"
+          write-mode: append
   job2:
     runs-on: ubuntu-latest
     needs: build
