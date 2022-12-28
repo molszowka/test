@@ -51,7 +51,7 @@ jobs:
       - name: Set Environment Variables
         uses: DamianReeves/write-file-action@master
         with:
-          path: ./.github/variables/myvars.yml
+          path: ./.github/variables/myvars.env
           contents: |
             echo "$IP"
           write-mode: append
