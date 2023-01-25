@@ -32,9 +32,8 @@ jobs:
         run: echo "test=hellomoto" >> $GITHUB_OUTPUT
         env:
           IP: 192.168.22.1
-  launch_variables:
-      uses: ./.github/workflows/variables.yml
-      secrets: inherit
+      - uses: ./.github/workflows/variables.yml
+
     
     
     
