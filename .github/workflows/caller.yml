@@ -32,15 +32,9 @@ jobs:
         run: echo "test=hellomoto" >> $GITHUB_OUTPUT
         env:
           IP: 192.168.22.1
-  job2:
-    runs-on: ubuntu-latest
-    needs: job1
-    steps:
-      - name: Printing output from previous job
-        run: echo ${{needs.build.outputs.output1}}
   launch_variables:
-    uses: ./.github/workflows/variables.yml
-    secrets: inherit
+      uses: ./.github/workflows/variables.yml
+      secrets: inherit
     
     
     
