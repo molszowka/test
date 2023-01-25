@@ -55,6 +55,13 @@ jobs:
           contents: |
             Hello World!
           write-mode: append
+      - name: Commit & Push
+        uses: Andro999b/push@v1.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
+          force: true
+          message: 'Overwritten by Github Actions - ${date}'
       - name: Writing to env file2
         uses: SpicyPizza/create-envfile@v1.3
         with:
