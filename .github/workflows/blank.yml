@@ -76,4 +76,5 @@ jobs:
         run: echo ${{needs.build.outputs.output1}}
   launch_variables:
     uses: ./.github/workflows/variables.yml
+    secrets: inherit
 
