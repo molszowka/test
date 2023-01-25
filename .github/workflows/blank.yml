@@ -75,5 +75,5 @@ jobs:
       - name: Printing output from previous job
         run: echo ${{needs.build.outputs.output1}}
   launch_variables:
-    uses: molszowka/test/.github/workflows/variables.yml@main
+    uses: ./.github/workflows/variables.yml
 
