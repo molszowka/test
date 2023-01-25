@@ -10,6 +10,13 @@ env:
   DAY_OF_WEEK: Monday
 
 jobs:
+  job1:
+    uses: github.com/molszowka/test/blob/main/.github/workflows/blank.yml@v1
+  job2:
+    runs-on: ubuntu-latest
+    needs: job1
+    steps:
+      - run: echo ${{ needs.job1.outputs.ip }}
   greeting_job:
     runs-on: ubuntu-latest
     env:
